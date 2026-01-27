@@ -1,0 +1,16 @@
+@first_name = Bob
+@last_name = Smith
+@primary_email = test@testemail.com
+@user_type = strategic_partner_admin
+#The company ID
+POST {{baseUrl}}/users HTTP/1.1
+content-type: application/json
+X-User: {{user}}
+X-Password: {{password}}
+
+{
+    "firstname": "{{first_name}}",
+    "surname": "{{last_name}}",
+    "primary_email": "{{primary_email}}",
+    "type": "{{user_type}}"
+}

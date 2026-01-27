@@ -1,0 +1,5 @@
+@callback_id = 114381
+### Delete Callback
+DELETE {{baseUrl}}/system/callbacks/{{callback_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

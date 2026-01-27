@@ -1,0 +1,6 @@
+@identifier = Test Company
+### Get Companies Filter by Identifier
+GET {{baseUrl}}/company/companies
+    ?conditions=identifier="{{identifier}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

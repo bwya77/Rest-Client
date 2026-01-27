@@ -1,0 +1,4 @@
+GET {{baseUrl}}/users
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

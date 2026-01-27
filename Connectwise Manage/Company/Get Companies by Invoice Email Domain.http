@@ -1,0 +1,6 @@
+@domain = testdomain.com
+### Get Companies by Invoice Email Domain
+GET {{baseUrl}}/company/companies
+    ?conditions=invoiceToEmailAddress like "*{{domain}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

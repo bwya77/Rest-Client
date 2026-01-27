@@ -1,0 +1,19 @@
+@company_id = 1234
+@status_id = 31
+@status_name = Offboarding
+### Set Company Status to Offboarding
+PATCH {{baseUrl}}/company/companies/{{company_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+  {
+    "path": "/status",
+    "op": "replace",
+    "value": {
+      "id": {{status_id}},
+      "name": "{{status_name}}"
+    }
+  }
+]

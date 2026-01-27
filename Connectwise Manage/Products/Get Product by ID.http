@@ -1,0 +1,4 @@
+@product_id = 73212
+GET {{baseUrl}}/procurement/products/{{product_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

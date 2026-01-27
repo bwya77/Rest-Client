@@ -1,0 +1,7 @@
+#The company ID
+@companyID=27119
+GET {{baseUrl}}/company/configurations
+    ?conditions=company/id={{companyID}}
+    &pageSize=1000
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientid: {{clientid}}

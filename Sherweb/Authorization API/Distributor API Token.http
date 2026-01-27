@@ -1,0 +1,4 @@
+POST {{baseUrl}}/auth/oidc/connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id={{client_id}}&client_secret={{client_secret}}&scope=service-provider&grant_type=client_credentials

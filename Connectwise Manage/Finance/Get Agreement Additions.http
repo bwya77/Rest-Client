@@ -1,0 +1,5 @@
+@agreement_id = 1454734
+### Get Agreement Additions
+GET {{baseUrl}}/finance/agreements/{{{{agreement_id}}/additions
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

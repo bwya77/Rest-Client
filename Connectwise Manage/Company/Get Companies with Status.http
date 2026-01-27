@@ -1,0 +1,6 @@
+@status_name = Active
+GET {{baseUrl}}/company/companies
+    ?conditions=status/name='{{status_name}}'
+    &pageSize=1000
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientid: {{clientid}}

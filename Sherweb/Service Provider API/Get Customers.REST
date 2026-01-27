@@ -1,0 +1,3 @@
+GET {{baseUrl}}/service-provider/v1/customers
+Authorization: Bearer {{access_token}}
+Ocp-Apim-Subscription-Key: {{ocp_apim_subscription_key}}

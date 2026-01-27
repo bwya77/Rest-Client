@@ -1,0 +1,7 @@
+PATCH {{baseUrl}}/subscriptions/9d5c9a8d-3fda-462c-a81f-118967508032
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+   "notificationUrl":"https://webhook.site/0f1241ba-31fc-4d31-9ad8-3cdf90e17e7b"
+}

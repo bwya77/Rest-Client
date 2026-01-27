@@ -1,0 +1,4 @@
+DELETE {{baseUrl}}/subscriptions/ebe2ae14-0ea4-4e04-bfa4-3d410713a0a9
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

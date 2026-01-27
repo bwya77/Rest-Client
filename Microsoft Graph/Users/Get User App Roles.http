@@ -1,0 +1,5 @@
+@userprincipalname = brad@thelazyadministrator.com
+GET {{baseUrl}}/users/{{userprincipalname}}/appRoleAssignments
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

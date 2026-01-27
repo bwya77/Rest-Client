@@ -1,0 +1,14 @@
+@callback_id = 16411
+### Patch Callback
+PATCH {{baseUrl}}/system/callbacks/{{callback_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+  {
+    "op": "replace",
+    "path": "inactiveFlag",
+    "value": true
+  }
+]

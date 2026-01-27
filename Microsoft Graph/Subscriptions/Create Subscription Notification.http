@@ -1,0 +1,12 @@
+POST {{baseUrl}}/subscriptions
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+   "changeType": "updated",
+   "notificationUrl": "https://ntivafunctions-fdfbb3gaavcba4es.eastus-01.azurewebsites.net/api/func-proofpoint-usersync?code=mKIETi5pRKuTvG_1-auJp-05XdkeeZknBvrAldvACbI-AzFugbsCeQ==",
+   "resource": "groups/010bf606-e58e-401c-ae10-9891a31934ca/members",
+   "expirationDateTime":"2025-11-05T18:23:45.9356913Z",
+   "latestSupportedTlsVersion": "v1_2",
+   "clientState": "CHICAGO-lake-SALUKI8"
+}

@@ -1,0 +1,14 @@
+@product_id = 8199113
+### Update customer description in product
+PATCH {{baseUrl}}/procurement/products/{{product_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+  {
+    "op": "replace",
+    "path": "/cost",
+    "value": 0.00
+  }
+]

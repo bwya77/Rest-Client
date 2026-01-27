@@ -1,0 +1,6 @@
+@company_id = 12345
+### Get Contacts for a Company By ID
+GET {{baseUrl}}/company/contacts
+    ?conditions=company/id={{company_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

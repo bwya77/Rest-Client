@@ -1,0 +1,6 @@
+@company_name = Test Company
+### Get Agreements for a Company
+GET {{baseUrl}}/finance/agreements
+    ?conditions=company/name='{{company_name}}'
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

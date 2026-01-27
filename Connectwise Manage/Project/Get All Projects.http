@@ -1,0 +1,4 @@
+### Get All Projects
+GET {{baseUrl}}/project/projects
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

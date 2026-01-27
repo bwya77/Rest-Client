@@ -1,0 +1,4 @@
+GET {{baseUrl}}/sales/orders
+    ?pageSize=1000
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientid: {{clientid}}

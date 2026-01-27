@@ -1,0 +1,5 @@
+@baseUrl = https://graph.microsoft.com/beta
+@snapshot_id = 61ed9835-4a40-4350-8a7d-80a2834041c4
+@access_token = YOUR_ACCESS_TOKEN_HERE
+DELETE {{baseUrl}}/admin/configurationManagement/configurationSnapshotJobs/{{snapshot_id}}
+Authorization: Bearer {{access_token}}

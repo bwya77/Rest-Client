@@ -1,0 +1,4 @@
+### Get Departments
+GET {{baseUrl}}/system/departments
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

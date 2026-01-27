@@ -1,0 +1,7 @@
+@status_name = Waiting.Agreement - Project Completion
+### Get Orders - Filter Status
+GET {{baseUrl}}/sales/orders
+    ?conditions=status/name='{{status_name}}'
+    &pageSize=1000
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

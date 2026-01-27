@@ -1,0 +1,6 @@
+@comapny_name = Company Name
+### Get Companies Filter by Name
+GET {{baseUrl}}/company/companies
+    ?conditions=name="{{comapny_name}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

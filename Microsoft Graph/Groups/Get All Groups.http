@@ -1,0 +1,5 @@
+GET {{baseUrl}}/groups
+    ?$top=999
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

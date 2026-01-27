@@ -1,0 +1,15 @@
+@product_id = 146474634
+@customer_description = Test Description
+### Update customer description in product
+PATCH {{baseUrl}}/procurement/products/{{product_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+    {
+    "op": "replace",
+    "path": "/customerDescription",
+    "value": "{{customer_description}}"
+  }
+]

@@ -1,0 +1,5 @@
+@order_id = 92571
+### Get Specific Order
+GET {{baseUrl}}/sales/orders/{{order_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

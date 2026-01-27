@@ -1,0 +1,32 @@
+@baseUrl = https://graph.microsoft.com/beta
+@access_token = YOUR_ACCESS_TOKEN_HERE
+
+POST {{baseUrl}}/admin/configurationManagement/configurationMonitors
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "displayName": "Demo Monitor",
+  "description": "This is a Demo Monitor for Entra Users",
+  "baseline": {
+    "displayName": "Demo Baseline",
+    "description": "This is a baseline with User resources",
+    "resources": [
+      {
+        "displayName": "Config Drift Bradley Wyatt Entra User",
+        "resourceType": "microsoft.entra.user",
+        "properties": {
+          "DisplayName": "Bradley Wyatt",
+          "UserPrincipalName": "brad@thelazyadministrator.com",
+          "Ensure": "Present",
+          "LicenseAssignment": [
+            "18a4bd3f-0b5b-4887-b04f-61dd0ee15f5e"
+          ],
+          "Roles": [
+            "Global Administrator"
+          ]
+        }
+      }
+    ]
+  }
+}

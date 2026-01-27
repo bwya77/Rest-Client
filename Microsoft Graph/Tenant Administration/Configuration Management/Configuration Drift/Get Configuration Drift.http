@@ -1,0 +1,6 @@
+@baseUrl = https://graph.microsoft.com/beta
+@configurationDrift_Id = c1a23f3e-1d4b-4e2b-8f7c-9f5e5d6e7a8b
+@access_token = YOUR_ACCESS_TOKEN_HERE
+
+GET {{baseUrl}}/admin/configurationManagement/configurationDrifts/{{configurationDrift_Id}}
+Authorization: Bearer {{access_token}}

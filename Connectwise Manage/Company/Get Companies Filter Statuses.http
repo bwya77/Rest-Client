@@ -1,0 +1,8 @@
+@status1_name = offboarding
+@status2_name = Inactive/Gone
+
+### Get Customers Where Status is Not Offboarding OR Inactive/Gone
+GET {{baseUrl}}/company/companies
+    ?conditions=status/name!="{{status1_name}}" and status/name!="{{status2_name}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

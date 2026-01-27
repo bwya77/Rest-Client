@@ -1,0 +1,5 @@
+@opportunity_id = 323481
+### Get Opportunity
+GET {{baseUrl}}/sales/opportunities/{{opportunity_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

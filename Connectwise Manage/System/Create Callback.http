@@ -1,0 +1,18 @@
+@level = status
+@objectid = 31072
+@url = https://callback/webhook-test/
+@description = Description
+@type = ticket
+### Create Callback
+POST {{baseUrl}}/system/callbacks
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+{
+    "level": "status",
+    "objectid": "31072",
+    "url": "https://callback/webhook-test/",
+    "description": "Description",
+    "type": "ticket"
+}

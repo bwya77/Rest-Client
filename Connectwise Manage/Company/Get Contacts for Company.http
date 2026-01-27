@@ -1,0 +1,6 @@
+@company_name = "Test Company"
+### Get Contacts for a Company
+GET {{baseUrl}}/company/contacts
+    ?conditions=company/name="{{company_name}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

@@ -1,0 +1,5 @@
+@conversion_id = 92572
+### Get Sales Order Conversions
+GET {{baseUrl}}/sales/orders/conversions/{{conversion_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

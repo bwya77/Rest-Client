@@ -1,0 +1,17 @@
+@ticket_id  = 7229261112
+@member_id  = 4801
+### Assign Project Ticket to Someone
+PATCH {{baseUrl}}/project/tickets/{{ticket_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+    {
+        "op": "replace",
+        "path": "/owner",
+        "value": {
+            "id": {{member_id}}
+        }
+    }
+]

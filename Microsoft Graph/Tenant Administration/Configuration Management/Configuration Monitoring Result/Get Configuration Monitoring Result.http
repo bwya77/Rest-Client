@@ -1,0 +1,5 @@
+@baseUrl = https://graph.microsoft.com/beta
+@configurationMonitoringResult_Id = fb708914-be65-4fda-a01e-77c4b2b7c403
+@access_token = YOUR_ACCESS_TOKEN_HERE
+GET {{baseUrl}}/admin/configurationManagement/configurationMonitoringResults/{{configurationMonitoringResult_Id}}
+Authorization: Bearer {{access_token}}

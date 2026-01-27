@@ -1,0 +1,4 @@
+GET {{baseUrl}}/groups
+    ?$filter=displayName eq 'Azure ATP bwya77 Users'
+Content-type: application/json
+Authorization: Bearer {{access_token}}

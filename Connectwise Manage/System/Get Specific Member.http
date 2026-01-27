@@ -1,0 +1,6 @@
+@identifier = API_BWYATT
+### Get Specific Member
+GET {{baseUrl}}/system/members
+    ?conditions=Identifier="{{identifier}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

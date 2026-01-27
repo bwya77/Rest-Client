@@ -1,0 +1,5 @@
+@user_email = bob.smith@example.com
+DELETE {{baseUrl}}/users/{{user_email}} HTTP/1.1
+content-type: application/json
+X-User: {{user}}
+X-Password: {{password}}

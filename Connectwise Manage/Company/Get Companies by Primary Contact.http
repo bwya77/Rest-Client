@@ -1,0 +1,6 @@
+@contact_name = Bradley Wyatt
+### Get Companies by Primary Contact
+GET {{baseUrl}}/company/companies
+    ?conditions=defaultContact/name="{{contact_name}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

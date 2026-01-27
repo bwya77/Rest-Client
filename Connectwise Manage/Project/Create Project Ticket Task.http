@@ -1,0 +1,13 @@
+@project_ticket = 324234
+### Create New Project Ticket Task
+POST {{baseUrl}}/project/tickets/{{project_ticket}}/tasks
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+{
+    "summary": "This is the title",
+    "notes": "this are the tasks notes",
+    "closedFlag": false,
+    "resolution": "transfer the license or remove it"
+}

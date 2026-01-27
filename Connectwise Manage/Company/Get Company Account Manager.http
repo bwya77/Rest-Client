@@ -1,0 +1,7 @@
+@company_id = 1234
+
+### Get Company Account Manager
+GET {{baseUrl}}/company/companies/{{company_id}}/teams
+    ?conditions=teamRole/name='Account Manager' OR accountManagerFlag=true
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

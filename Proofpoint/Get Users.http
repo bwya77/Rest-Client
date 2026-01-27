@@ -1,0 +1,4 @@
+#The company ID
+GET {{baseUrl}}/users HTTP/1.1
+X-User: {{user}}
+X-Password: {{password}}

@@ -1,0 +1,17 @@
+@salesorder_id = 126001
+### Change Sales Order Start Date
+PATCH {{baseUrl}}/sales/orders/{{salesorder_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+  {
+    "op": "replace",
+    "path": "/customFields",
+    "value": [{
+      "id": 54,
+      "value": "2025-01-10T00:00:00Z"
+    }]
+  }
+]

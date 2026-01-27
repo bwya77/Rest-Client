@@ -1,0 +1,4 @@
+GET {{baseUrl}}/groups
+    ?$filter=securityEnabled eq true
+Content-type: application/json
+Authorization: Bearer {{access_token}}

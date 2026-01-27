@@ -1,0 +1,6 @@
+@configuration_id = 119
+### Get all Customers with Specific Config
+GET {{baseUrl}}/company/configurations
+    ?conditions=type/id = {{configuration_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

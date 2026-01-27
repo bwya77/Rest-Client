@@ -1,0 +1,6 @@
+@baseUrl = https://graph.microsoft.com/beta
+@configurationMonitor_id = fb708914-be65-4fda-a01e-77c4b2b7c403
+@access_token = YOUR_ACCESS_TOKEN_HERE
+
+DELETE {{baseUrl}}/admin/configurationManagement/configurationMonitors/{{configurationMonitor_id}}/baseline
+Authorization: Bearer {{access_token}}

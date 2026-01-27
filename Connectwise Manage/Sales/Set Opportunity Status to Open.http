@@ -1,0 +1,17 @@
+@opportunity_id = 306561
+### Set Status of Opportunity to Open
+PATCH {{baseUrl}}/sales/opportunities/{{opportunity_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
+Content-Type: application/json
+
+[
+  {
+    "op": "replace",
+    "path": "/status",
+    "value": {
+      "id": 1,
+      "name": "Open"
+    }
+  }
+]

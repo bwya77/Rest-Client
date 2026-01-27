@@ -1,0 +1,4 @@
+### Get Orders
+GET {{baseUrl}}/sales/orders
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

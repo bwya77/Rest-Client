@@ -1,0 +1,4 @@
+GET {{baseUrl}}/users/ac3f067f-b3be-40b7-bf6c-8d2e6a1b2343
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

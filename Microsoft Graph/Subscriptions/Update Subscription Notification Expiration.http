@@ -1,0 +1,7 @@
+PATCH {{baseUrl}}/subscriptions/365658bb-9e31-404b-bcad-9ea71c706167
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+   "expirationDateTime":"2025-11-07T18:23:45.9356913Z",
+}

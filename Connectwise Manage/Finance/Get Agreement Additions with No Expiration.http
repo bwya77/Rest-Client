@@ -1,0 +1,6 @@
+### Get Agreement Additions with No Expiration
+# Note: Replace 61061 with actual agreement ID
+GET {{baseUrl}}/finance/agreements/61061/additions
+    ?conditions=cancelledDate=null
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

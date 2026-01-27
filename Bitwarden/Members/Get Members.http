@@ -1,0 +1,2 @@
+GET {{baseUrl}}/public/members HTTP/1.1
+Authorization: Bearer {{access_token}}

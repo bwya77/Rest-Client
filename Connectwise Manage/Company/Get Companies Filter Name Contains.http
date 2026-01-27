@@ -1,0 +1,5 @@
+### Get Companies Filter Name Contains
+GET {{baseUrl}}/company/companies
+    ?conditions=name contains "Logistics"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

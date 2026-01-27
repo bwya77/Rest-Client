@@ -1,0 +1,5 @@
+@company_id = 1234
+### Get Company Teams
+GET {{baseUrl}}/company/companies/{{company_id}}/teams
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

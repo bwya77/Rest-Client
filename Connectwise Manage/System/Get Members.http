@@ -1,0 +1,5 @@
+### Get Members
+GET {{baseUrl}}/system/members
+    ?pageSize=1000
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}

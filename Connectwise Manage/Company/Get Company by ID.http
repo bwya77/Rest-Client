@@ -1,0 +1,5 @@
+@company_id = 280712
+### Get Company by ID
+GET {{baseUrl}}/company/companies/{{company_id}}
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
