@@ -2,8 +2,9 @@
 @configurationMonitor_id = fb708914-be65-4fda-a01e-77c4b2b7c403
 @access_token = YOUR_ACCESS_TOKEN_HERE
 
-PATCH {{baseUrl}}/admin/configurationManagement/configurationMonitors/{{configurationMonitor_id}}/baseline
+PATCH {{baseUrl}}/admin/configurationManagement/configurationMonitors/{{configurationMonitor_id}}
 Authorization: Bearer {{access_token}}
+Content-Type: application/json
 
 {
   "displayName": "Demo Monitor",
@@ -20,7 +21,7 @@ Authorization: Bearer {{access_token}}
           "UserPrincipalName": "brad@thelazyadministrator.com",
           "Ensure": "Present",
           "LicenseAssignment": [
-            "18a4bd3f-0b5b-4887-b04f-61dd0ee15f5e"
+            "Microsoft_365_E5_(no_Teams)"
           ],
           "Roles": [
             "Global Administrator"
