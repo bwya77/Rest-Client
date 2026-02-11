@@ -1,0 +1,5 @@
+GET {{baseUrl}}/groups/010bf606-e58e-401c-ae10-9891a31934ca/members
+    ?$top=999
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
