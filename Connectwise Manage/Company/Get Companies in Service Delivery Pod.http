@@ -1,0 +1,8 @@
+@id = 79
+@pod_name = B01.Chicago Pod 1
+
+### Get Customers in specific pod
+GET {{baseUrl}}/company/companies
+    ?customFieldConditions=id={{id}} AND value="{{pod_name}}"
+Authorization: Basic {{companyid}}+{{publicKey}} {{privateKey}}
+clientId: {{clientid}}
