@@ -1,0 +1,4 @@
+@environmentId= Default-49c3a076-0827-4d1e-881a-a190ae4865ce
+@workflowId= 13ed73ab-64ad-4a23-87e2-f990d0f364d5
+GET https://api.powerplatform.com/powerautomate/environments/{{environmentId}}/flowRuns?workflowId={{workflowId}}&api-version=2022-03-01-preview
+

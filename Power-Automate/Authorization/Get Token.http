@@ -1,0 +1,7 @@
+@tenantID = 72f988bf-86f1-41af-91ab-2d7cd011db47
+POST https://login.microsoftonline.com/{{tenantID}}/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id={{clientId}}&scope=https://api.powerplatform.com/.default&client_secret={{clientSecret}}&grant_type=client_credentials
+
+
