@@ -1,0 +1,4 @@
+GET {{baseUrl}}/deviceManagement/virtualEndpoint/provisioningPolicies
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

@@ -1,0 +1,4 @@
+GET {{baseUrl}}/deviceManagement/virtualEndpoint/reports/getRealTimeRemoteConnectionStatus(cloudPcId='3b6b160c-efc2-4ea0-b8c4-5bceea477f3d')
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
