@@ -1,0 +1,15 @@
+POST {{baseUrl}}/deviceManagement/virtualEndpoint/reports/retrieveCloudPcTroubleshootReports
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "reportName": "troubleshootCloudPCDurationAggregatedReport",
+  "select": [
+    "ManagedDeviceName",
+    "DurationInHour",
+    "AvgDurationInHour"
+  ],
+  "filter": "(UPNParam eq 'brad@windowsfromanywhere.com') and (TimeRange eq 'Last 28 days')",
+  "top": 100,
+  "skip": 0
+}
