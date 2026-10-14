@@ -1,0 +1,4 @@
+GET {{baseUrl}}/users('5f660169-d691-487d-970b-965a43b00dd2')/mobileAppIntentAndStates('b3eb43d8-54f7-4ed6-b8c9-32887689e0e8')
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+

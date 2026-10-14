@@ -1,0 +1,3 @@
+GET {{baseUrl}}/deviceManagement/detectedApps?$orderBy=displayName
+Content-type: application/json
+Authorization: Bearer {{access_token}}

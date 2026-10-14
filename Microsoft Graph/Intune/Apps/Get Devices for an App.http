@@ -1,0 +1,3 @@
+GET {{baseUrl}}/deviceManagement/detectedApps('df678154f12b0a136f71bcf68a0899f8cd9e31e097f24d251efd3146fbd31f17')/managedDevices?$top=20&$skip=0&$orderby=deviceName%20asc
+Content-type: application/json
+Authorization: Bearer {{access_token}}

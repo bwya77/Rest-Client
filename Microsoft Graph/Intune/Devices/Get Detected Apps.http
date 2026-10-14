@@ -1,0 +1,4 @@
+GET {{baseUrl}}/deviceManagement/manageddevices('bbfae1fc-af9b-4621-9477-454ee0afe22b')/detectedApps?$top=50&$orderBy=displayName%20asc
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
