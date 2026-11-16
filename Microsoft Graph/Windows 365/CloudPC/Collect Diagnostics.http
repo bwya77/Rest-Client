@@ -1,0 +1,12 @@
+POST {{baseUrl}}/deviceManagement/managedDevices('bbfae1fc-af9b-4621-9477-454ee0afe22b')/createDeviceLogCollectionRequest
+Authorization: Bearer {{access_token}}
+Content-type: application/x-www-form-urlencoded
+
+{
+  "templateType": {
+    "@odata.type": "microsoft.graph.deviceLogCollectionRequest",
+    "templateType": "predefined"
+  }
+}
+
+

@@ -1,0 +1,2 @@
+GET {{baseUrl}}/deviceManagement/monitoring/alertRecords
+Authorization: Bearer {{access_token}}
