@@ -1,0 +1,2 @@
+POST {{baseUrl}}/deviceManagement/virtualEndpoint/cloudPCs/95194d88-cec5-4b65-af62-26dbd1814364/troubleshoot
+Authorization: Bearer {{access_token}}

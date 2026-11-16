@@ -1,17 +1,18 @@
 <#
 .SYNOPSIS
     Authenticates against the undocumented Windows 365 (CloudPC) first-party API
-    and retrieves details for a given Cloud PC.
+    and retrieves details for one or more Cloud PCs.
 
 .DESCRIPTION
     Uses MSAL.PS to request a delegated access token (scope: EndUser.Access) for
     the Windows 365 IW Service resource (aud: 7c0a6aea-533c-458c-9f81-15568f10f6e4),
     using a custom app registration ("W365-CLI-PowerShell") that has been granted
     admin consent for that resource/scope. Then calls the CloudPC API with the
-    resulting bearer token.
+    resulting bearer token. Failed lookups are reported as errors; remaining
+    IDs are still queried, and the JSON output contains successful lookups.
 
 .PARAMETER CloudPcId
-    The Cloud PC GUID to look up. Defaults to the one used during setup.
+    The Cloud PC GUIDs to look up. Defaults to the one used during setup.
 
 .PARAMETER TenantId
     Entra tenant ID. Defaults to the windowsfromanywhere.com tenant.
@@ -24,11 +25,12 @@
 .EXAMPLE
     .\Get-W365CloudPC.ps1
     .\Get-W365CloudPC.ps1 -CloudPcId "95194d88-cec5-4b65-af62-26dbd1814364" -TenantID "ecf660db-ffc4-4d26-b980-29e0dc12189e"
+    .\Get-W365CloudPC.ps1 -CloudPcId "9112f0f9-3a96-4abd-93d9-9905db92ef93","95194d88-cec5-4b65-af62-26dbd1814364"
 #>
 [CmdletBinding()]
 param(
-    [string]$CloudPcId = "",
-    [string]$TenantId  = "",
+    [string[]]$CloudPcId = @("9112f0f9-3a96-4abd-93d9-9905db92ef93"),
+    [string]$TenantId  = "ecf660db-ffc4-4d26-b980-29e0dc12189e",
     [string]$ClientId  = "14562271-779b-429b-9b98-10a1d5758df3",
     [string]$Resource  = "7c0a6aea-533c-458c-9f81-15568f10f6e4"
 )
@@ -54,9 +56,29 @@ if (-not $token.AccessToken) {
 }
 
 $headers = @{ Authorization = "Bearer $($token.AccessToken)" }
-$uri = "https://windows365.microsoft.com/u/api/v1/cloudPCs/$CloudPcId"
 
-Write-Host "Calling $uri ..." -ForegroundColor Cyan
-$result = Invoke-RestMethod -Uri $uri -Headers $headers -Method Get
+$results = foreach ($id in $CloudPcId) {
+    $uri = "https://windows365.microsoft.com/u/api/v1/cloudPCs/$id"
+    Write-Host "Calling $uri ..." -ForegroundColor Cyan
 
-$result | ConvertTo-Json -Depth 10
+    try {
+        $details = Invoke-RestMethod -Uri $uri -Headers $headers -Method Get
+    }
+    catch {
+        $message = if ($_.ErrorDetails.Message) {
+            $_.ErrorDetails.Message
+        }
+        else {
+            $_.Exception.Message
+        }
+        Write-Error -Message "Cloud PC '$id' request failed: $message" -TargetObject $id -ErrorAction Continue
+        continue
+    }
+
+    [pscustomobject]@{
+        CloudPcId = $id
+        Details   = $details
+    }
+}
+
+ConvertTo-Json -InputObject @($results) -Depth 10

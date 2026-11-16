@@ -1,3 +1,2 @@
-GET {{baseUrl}}/deviceManagement/virtualEndpoint/cloudPCs?$filter=(provisioningPolicyId+eq+'8e8a545f-6168-4472-9466-9f05520a5eb3')+and+servicePlanType+eq+'enterprise'&$top=50&$orderBy=lastModifiedDateTime+desc&$count=true&$select=id,managedDeviceId,managedDeviceName,status,lastRemoteActionResult,provisioningType,sharedDeviceDetail,connectivityResult,provisionedDateTime
-Content-type: application/json
+GET {{baseUrl}}/deviceManagement/virtualEndpoint/cloudPCs
 Authorization: Bearer {{access_token}}
