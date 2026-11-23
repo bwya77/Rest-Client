@@ -1,0 +1,17 @@
+POST {{baseUrl}}/deviceManagement/virtualEndpoint/reports/retrieveCloudPcTroubleshootReports
+Content-type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "reportName": "licenseUtilizationTrendReport",
+  "select": [
+    "EventDateTime",
+    "GroupColumn",
+    "MaxConcurrentConnections",
+    "TotalHoursUsed"
+  ],
+  "filter": "(TimeRange eq 'Last 28 days') and (LicenseUtilizationCategoryParam eq 'FlexDedicated') and (ServicePlanTypeParam eq '') and (ServicePlanNameParam eq '') and (RegionParam eq '') and (PolicyNameParam eq '')",
+  "groupby": [
+    "All"
+  ]
+}
